@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>For Malkin Jii <3</title>
+<style>
+  *{box-sizing:border-box;margin:0;padding:0}
+  body{
+    min-height:100vh;
+    font-family:Arial,Helvetica,sans-serif;
+    background:linear-gradient(135deg,#ffd6e7,#fff0f6,#ffdbe9);
+    display:flex;align-items:center;justify-content:center;
+    overflow:hidden;color:#5a1734;
+  }
+  .card{
+    width:min(92%,430px);
+    min-height:570px;
+    background:rgba(255,255,255,.78);
+    backdrop-filter:blur(12px);
+    border:1px solid rgba(255,255,255,.9);
+    border-radius:28px;
+    padding:30px 22px;
+    text-align:center;
+    box-shadow:0 18px 60px rgba(120,30,70,.18);
+    position:relative;
+    overflow:hidden;
+  }
+  .heart{font-size:52px;animation:pulse 1.5s infinite;margin:10px 0 16px}
+  @keyframes pulse{50%{transform:scale(1.12)}}
+  h1{font-size:29px;margin-bottom:15px}
+  h2{font-size:24px;margin:18px 0 12px}
+  p{font-size:17px;line-height:1.65;margin:10px auto;max-width:350px}
+  .small{font-size:14px;opacity:.7}
+  .buttons{display:flex;justify-content:center;gap:14px;margin-top:28px;min-height:55px}
+  button{
+    border:0;border-radius:999px;padding:14px 24px;font-size:16px;
+    font-weight:700;cursor:pointer;transition:.2s;
+    box-shadow:0 8px 18px rgba(100,20,50,.15);
+  }
+  .yes{background:#e83e78;color:white}
+  .no{background:white;color:#b62c5e;border:1px solid #f0a7c0}
+  button:active{transform:scale(.94)}
+  .hidden{display:none}
+  .screen{animation:in .45s ease}
+  @keyframes in{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+  .footer{position:absolute;bottom:18px;left:0;right:0;font-size:12px;opacity:.5}
+  .sparkles{font-size:24px;letter-spacing:8px;margin-top:18px}
+  .reason{
+    background:#fff4f8;border-radius:18px;padding:14px;margin:18px auto;
+    font-size:15px;line-height:1.5;
+  }
+  .tiny{margin-top:20px;font-size:13px;opacity:.65}
+</style>
+</head>
+<body>
+
+<div class="card">
+
+  <!-- SCREEN 1 -->
+  <section id="s1" class="screen">
+    <div class="heart">🥺</div>
+    <h1>Oyeee Malkin Jii &lt;3</h1>
+    <p>Before you start getting angry...</p>
+    <p>I have a very important question for you.</p>
+    <div class="sparkles">✨ 💗 ✨</div>
+    <button class="yes" onclick="show('s2')">Okay, bolo 😭</button>
+  </section>
+
+  <!-- SCREEN 2 -->
+  <section id="s2" class="screen hidden">
+    <div class="heart">🙇‍♂️</div>
+    <h2>Will you please forgive me?</h2>
+    <p>Idk why r u angry... 😭</p>
+    <p>and yes, I KNOW you're angry 😭</p>
+    <div class="buttons">
+      <button class="yes" onclick="show('final')">YES 🥹</button>
+      <button class="no" id="noBtn" onclick="nope()">NO 😤</button>
+    </div>
+    <p class="tiny">Choose carefully, Malkin Jii 👀</p>
+  </section>
+
+  <!-- SCREEN 3 -->
+  <section id="s3" class="screen hidden">
+    <div class="heart">😔</div>
+    <h2>Achaaa... NO?</h2>
+    <p>Thik hai ji.</p>
+    <p>But ek baar aur soch lo...</p>
+    <button class="yes" onclick="show('s4')">Fine, I'll think 😭</button>
+  </section>
+
+  <!-- SCREEN 4 -->
+  <section id="s4" class="screen hidden">
+    <div class="heart">🥺👉👈</div>
+    <h2>Malkin Jii pleaseee</h2>
+    <p>Idk why r u angry, meri intention tumhe ignore karne ki bilkul nahi thi.</p>
+    <button class="yes" onclick="show('s5')">Hmm... continue 👀</button>
+  </section>
+
+  <!-- SCREEN 5 -->
+  <section id="s5" class="screen hidden">
+    <div class="heart">💗</div>
+    <h2>Last chance...</h2>
+    <div class="reason">
+      Tumse sorry bolna bhi cute lagta hai,
+      but tumhara mujhse naraz rehna bilkul cute nahi lagta. :(
+    </div>
+    <p>Ab maan jao na, Malkin Jii &lt;3</p>
+    <button class="yes" onclick="show('final')">Okay, maaf kiya 🥹</button>
+  </section>
+
+  <!-- FINAL -->
+  <section id="final" class="screen hidden">
+    <div class="heart">❤️</div>
+    <h1>Thank you, Malkin Jii &lt;3</h1>
+    <p>
+      Sach bolu toh, I really didn't want you to feel bad.
+      Main tumhe upset nahi karna chahta tha, bas pata nahi tum mujhse kyun angry ho. 😭
+    </p>
+    <p>
+      Sorry for that. 🥺
+      Aur haan, thoda late sahi, but apology officially delivered.
+    </p>
+    <p>
+      Tum naraz hoti ho toh mujhe bhi acha nahi lagta...
+      isliye ab please woh cute si smile wapas kar do. :)
+    </p>
+    <div class="sparkles">💗 ✨ 💗</div>
+    <h2>Sorry, Malkin Jii. &lt;3</h2>
+    <p class="small">— from the idiot who just wants his Malkin Jii to smile again 😭</p>
+  </section>
+
+  <div class="footer">made specially for Malkin Jii &lt;3</div>
+</div>
+
+<script>
+function show(id){
+  document.querySelectorAll('.screen').forEach(s => s.classList.add('hidden'));
+  const target = document.getElementById(id);
+  target.classList.remove('hidden');
+  target.classList.remove('screen');
+  void target.offsetWidth;
+  target.classList.add('screen');
+}
+
+let noClicks = 0;
+function nope(){
+  noClicks++;
+  if(noClicks === 1) show('s3');
+  else if(noClicks === 2) show('s4');
+  else show('s5');
+}
+</script>
+
+</body>
+</html>
